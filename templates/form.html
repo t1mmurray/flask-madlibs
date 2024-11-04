@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title%}Input Form {% endblock %} {% block
+content %}
+<h1>Plug in your words here:</h1>
+<form method="post">
+  {% for word in prompts %}
+  <label for="{{word}}">{{word}}:</label>
+  <input type="text" placeholder="{{word}}" name="{{word}}" />
+
+  {% endfor %}
+  <button>Submit</button>
+</form>
+{% endblock %}
